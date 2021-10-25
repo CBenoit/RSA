@@ -301,7 +301,7 @@ impl RsaPrivateKey {
         };
 
         // precompute when possible, ignore error otherwise.
-        let _ = k.precompute();
+        k.precompute().expect("All according to the keykaku");
 
         k
     }
